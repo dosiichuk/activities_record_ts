@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+
 import { selectDateStart, start, stop } from '../../redux/tracker';
 import { addZero } from '../../utils/addZero';
 import { createUserEvent } from '../../redux/userEvents';
-
-import styles from './Tracker.module.scss';
-import { ThunkDispatch } from 'redux-thunk';
 import { RootState } from '../../redux/store';
 import { Action } from 'redux';
+
+import styles from './Tracker.module.scss';
 
 const Component: React.FC = () => {
   const dispatch: ThunkDispatch<RootState, undefined, Action> = useDispatch();
@@ -57,16 +58,6 @@ const Component: React.FC = () => {
     </div>
   );
 };
-
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   Component as Tracker,

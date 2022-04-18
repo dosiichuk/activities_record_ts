@@ -1,6 +1,14 @@
 import { Action } from 'redux';
 import { RootState } from './store';
 
+//selectors
+export const selectTrackerState = (rootState: RootState) => {
+  return rootState.tracker;
+};
+export const selectDateStart = (rootState: RootState) => {
+  return rootState.tracker.dateStart;
+};
+
 interface TrackerState {
   dateStart: string;
 }
@@ -14,13 +22,6 @@ type StopAction = Action<typeof STOP>;
 //action creators
 export const start = (): StartAction => ({ type: START });
 export const stop = (): StopAction => ({ type: STOP });
-
-export const selectTrackerState = (rootState: RootState) => {
-  return rootState.tracker;
-};
-export const selectDateStart = (rootState: RootState) => {
-  return rootState.tracker.dateStart;
-};
 
 //initial state
 const initialState = {

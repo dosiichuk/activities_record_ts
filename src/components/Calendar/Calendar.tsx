@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { Action } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+
 import { RootState } from '../../redux/store';
 import { selectUserEvents, loadUserEvents } from '../../redux/userEvents';
 import { Event } from '../Event/Event';
