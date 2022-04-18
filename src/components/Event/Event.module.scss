@@ -1,0 +1,35 @@
+.calendar_event {
+    align-items: flex-start;
+    background: #e3f6f5;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 0 10px;
+    padding: 8px 14px;
+  }
+  
+  .calendar_event_info {
+    flex-grow: 1;
+    flex-basis: 82%;
+    line-height: 23px;
+  }
+  
+  .calendar_event_time {
+    font-size: 0.8em;
+  }
+  
+  .calendar_event_delete_button {
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 23px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 23px;
+  }
+  

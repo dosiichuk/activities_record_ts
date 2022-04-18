@@ -6,6 +6,7 @@ import { ThunkDispatch } from 'redux-thunk';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 import { RootState } from '../../redux/store';
 import { selectUserEvents, loadUserEvents } from '../../redux/userEvents';
+import { Event } from '../Event/Event';
 import { groupEventsByDay } from '../../utils/groupEvents';
 import styles from './Calendar.module.scss';
 
@@ -44,24 +45,7 @@ const Component: React.FC<Props> = ({ events, loadUserEvents }) => {
               </div>
               <div className={styles.calendar_events}>
                 {events.map((event) => {
-                  return (
-                    <div key={event.id} className={styles.calendar_event}>
-                      <div className={styles.calendar_event_info}>
-                        <div className={styles.calendar_event_time}>
-                          {new Date(event.dateStart).getHours()}:
-                          {new Date(event.dateStart).getMinutes()} -{' '}
-                          {new Date(event.dateEnd).getHours()}:
-                          {new Date(event.dateEnd).getMinutes()}
-                        </div>
-                        <div className={styles.calendar_event_title}>
-                          {event.title}
-                        </div>
-                      </div>
-                      <button className={styles.calendar_event_delete_button}>
-                        x
-                      </button>
-                    </div>
-                  );
+                  return <Event key={event.id} event={event} />;
                 })}
               </div>
             </div>
