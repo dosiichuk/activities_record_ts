@@ -1,12 +1,12 @@
 import React from 'react';
 import { Tracker } from '../Tracker/Tracker';
-import { Calendar } from '../Calendar/Calendar';
+import { Diary } from '../Diary/Diary';
 
 function App() {
   return (
     <div className="App">
       <Tracker />
-      <Calendar />
+      <Diary />
     </div>
   );
 }

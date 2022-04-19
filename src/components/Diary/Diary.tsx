@@ -5,10 +5,11 @@ import { Action } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import { RootState } from '../../redux/store';
-import { selectUserEvents, loadUserEvents } from '../../redux/userEvents';
+import { selectUserEvents } from '../../redux/userEvents';
+import { loadUserEvents } from '../../redux/action-creators';
 import { Event } from '../Event/Event';
 import { groupEventsByDay } from '../../utils/groupEvents';
-import styles from './Calendar.module.scss';
+import styles from './Diary.module.scss';
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
@@ -71,4 +72,4 @@ const mapDispatchToProps = (
 const connector = connect(mapStateToProps, mapDispatchToProps);
 const Container = connector(Component);
 
-export { Container as Calendar, Component as CalendarComponent };
+export { Container as Diary, Component as DiaryComponent };

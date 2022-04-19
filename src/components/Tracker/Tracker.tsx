@@ -5,7 +5,7 @@ import { ThunkDispatch } from 'redux-thunk';
 
 import { selectDateStart, start, stop } from '../../redux/tracker';
 import { addZero } from '../../utils/addZero';
-import { createUserEvent } from '../../redux/userEvents';
+import { createUserEvent } from '../../redux/action-creators';
 import { RootState } from '../../redux/store';
 import { Action } from 'redux';
 

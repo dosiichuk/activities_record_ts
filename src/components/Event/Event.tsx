@@ -4,11 +4,8 @@ import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
 
 import { RootState } from '../../redux/store';
-import {
-  deleteUserEvent,
-  updateUserEvent,
-  UserEvent,
-} from '../../redux/userEvents';
+import { UserEvent } from '../../redux/userEvents';
+import { deleteUserEvent, updateUserEvent } from '../../redux/action-creators';
 import styles from './Event.module.scss';
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
